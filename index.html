@@ -2,150 +2,172 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Naveen | AIML Student</title>
+<title>Naveen | AIML Samurai</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
     margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background: #0a0a0a;
-    color: #e5e5e5;
+    font-family: 'Segoe UI', sans-serif;
+    background: #050b18;
+    color: #e5e7eb;
+    overflow-x: hidden;
 }
 
-/* Samurai red accent */
+/* Accent */
 :root {
-    --red: #9b1c1c;
+    --red: #b91c1c;
+    --blue: #0f172a;
 }
 
-/* Header */
-header {
-    background: linear-gradient(180deg, #0a0a0a, #111);
-    padding: 80px 20px;
-    text-align: center;
-    border-bottom: 1px solid var(--red);
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(120deg, #020617, #050b18);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    position: relative;
 }
 
-header h1 {
-    font-size: 52px;
+.hero h1 {
+    font-size: 70px;
     margin: 0;
     color: var(--red);
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
-header p {
-    color: #aaa;
-    margin-top: 10px;
-    font-size: 18px;
+.hero p {
+    font-size: 22px;
+    color: #cbd5f5;
+    max-width: 600px;
 }
 
-/* Main container */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 60px 20px;
+/* Samurai line */
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: 80px;
+    left: 10%;
+    width: 300px;
+    height: 2px;
+    background: var(--red);
+}
+
+/* Sections */
+section {
+    padding: 120px 10%;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 h2 {
     color: var(--red);
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-/* Samurai cards */
-.card {
-    background: #111;
-    padding: 30px;
-    border-radius: 10px;
-    border-left: 4px solid var(--red);
+    font-size: 36px;
     margin-bottom: 30px;
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(155,28,28,0.4);
+/* Cards */
+.card {
+    background: linear-gradient(180deg, #020617, #020617);
+    border-left: 4px solid var(--red);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7);
 }
 
-/* Lists */
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* Links */
-a {
-    color: var(--red);
-    text-decoration: none;
+/* Skills */
+.skills span {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 18px;
+    border: 1px solid var(--red);
+    border-radius: 20px;
+    color: #fca5a5;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background: #000;
-    color: #666;
-    border-top: 1px solid var(--red);
+    padding: 40px;
+    background: #020617;
+    color: #64748b;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="hero">
     <h1>NAVEEN</h1>
-    <p>BTech AIML Student • Python Learner</p>
-    <p>Sharpening my skills like a blade</p>
-</header>
-
-<div class="container">
-
-<h2>About Me</h2>
-<div class="card">
-    <p>
-        I am a BTech student in Artificial Intelligence and Machine Learning.
-        I focus on learning Python, statistics, and machine learning from the ground up
-        by building real projects and improving every day.
-    </p>
+    <p>BTech AIML Student — Sharpening my skills like a samurai blade in the Tokyo night.</p>
 </div>
 
-<h2>Skills</h2>
-<div class="card">
-    <ul>
-        <li>Python</li>
-        <li>Problem Solving</li>
-        <li>Statistics & Probability</li>
-        <li>Machine Learning Fundamentals</li>
-    </ul>
-</div>
+<section>
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a BTech student in Artificial Intelligence and Machine Learning.
+            I focus on building strong foundations in Python, statistics, and machine learning
+            by creating real projects and improving step by step.
+        </p>
+    </div>
+</section>
 
-<h2>Projects</h2>
-<div class="card">
-    <h3>Student Marks Analyzer</h3>
-    <p>
-        A Python program that takes student marks and calculates
-        average, grade, and class ranking.
-    </p>
-    <p>More projects coming soon.</p>
-</div>
+<section>
+    <h2>Skills</h2>
+    <div class="card skills">
+        <span>Python</span>
+        <span>Problem Solving</span>
+        <span>Statistics</span>
+        <span>Probability</span>
+        <span>Machine Learning</span>
+    </div>
+</section>
 
-<h2>Contact</h2>
-<div class="card">
-    <p>
-        GitHub:
-        <a href="https://github.com/naveen-aiml" target="_blank">
-            github.com/naveen-aiml
-        </a>
-    </p>
-</div>
+<section>
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>Student Marks Analyzer</h3>
+        <p>
+            A Python tool that calculates average, grade, and ranking of students from their marks.
+        </p>
+        <p>More samurai projects coming.</p>
+    </div>
+</section>
 
-</div>
+<section>
+    <h2>Contact</h2>
+    <div class="card">
+        <p>GitHub: <a href="https://github.com/naveen-aiml" style="color:#fca5a5;">github.com/naveen-aiml</a></p>
+    </div>
+</section>
 
 <footer>
-    © 2026 Naveen • AIML Portfolio
+    © 2026 Naveen • AIML Samurai Portfolio
 </footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+    const trigger = window.innerHeight * 0.8;
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < trigger) {
+            sec.classList.add("show");
+        }
+    });
+});
+</script>
 
 </body>
 </html>
