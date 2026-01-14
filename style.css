@@ -91,6 +91,25 @@ body {
   border-left: 4px solid #ff2e63;
   padding-left: 15px;
 }
+.block h2 {
+  position: relative;
+}
+
+.block h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff2e63, #8be9fd);
+  box-shadow: 0 0 15px #ff2e63;
+  transition: 0.8s ease;
+}
+
+.block.show h2::after {
+  width: 100%;
+}
 
 .block h3 {
   font-size: 24px;
