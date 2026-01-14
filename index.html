@@ -5,169 +5,48 @@
 <title>Naveen | AIML Samurai</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #050b18;
-    color: #e5e7eb;
-    overflow-x: hidden;
-}
-
-/* Accent */
-:root {
-    --red: #b91c1c;
-    --blue: #0f172a;
-}
-
-/* Hero */
-.hero {
-    height: 100vh;
-    background: linear-gradient(120deg, #020617, #050b18);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 10%;
-    position: relative;
-}
-
-.hero h1 {
-    font-size: 70px;
-    margin: 0;
-    color: var(--red);
-    letter-spacing: 3px;
-}
-
-.hero p {
-    font-size: 22px;
-    color: #cbd5f5;
-    max-width: 600px;
-}
-
-/* Samurai line */
-.hero::after {
-    content: "";
-    position: absolute;
-    bottom: 80px;
-    left: 10%;
-    width: 300px;
-    height: 2px;
-    background: var(--red);
-}
-
-/* Sections */
-section {
-    padding: 120px 10%;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 1s ease;
-}
-
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-h2 {
-    color: var(--red);
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-/* Cards */
-.card {
-    background: linear-gradient(180deg, #020617, #020617);
-    border-left: 4px solid var(--red);
-    padding: 30px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.7);
-}
-
-/* Skills */
-.skills span {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 18px;
-    border: 1px solid var(--red);
-    border-radius: 20px;
-    color: #fca5a5;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 40px;
-    background: #020617;
-    color: #64748b;
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>NAVEEN</h1>
-    <p>BTech AIML Student — Sharpening my skills like a samurai blade in the Tokyo night.</p>
+<div id="loader">
+    <div class="katana"></div>
 </div>
 
-<section>
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            I am a BTech student in Artificial Intelligence and Machine Learning.
-            I focus on building strong foundations in Python, statistics, and machine learning
-            by creating real projects and improving step by step.
-        </p>
+<header class="hero">
+    <div class="hero-content">
+        <h1>NAVEEN</h1>
+        <p>AIML Student • Sharpening my skills like a samurai blade</p>
     </div>
+</header>
+
+<section class="section about">
+    <h2>About</h2>
+    <p>
+        I am a BTech AIML student focused on Python, Machine Learning, and real-world problem solving.
+        I build projects to improve every day — slow, disciplined, and sharp.
+    </p>
 </section>
 
-<section>
-    <h2>Skills</h2>
-    <div class="card skills">
-        <span>Python</span>
-        <span>Problem Solving</span>
-        <span>Statistics</span>
-        <span>Probability</span>
-        <span>Machine Learning</span>
-    </div>
-</section>
-
-<section>
+<section class="section projects">
     <h2>Projects</h2>
-    <div class="card">
-        <h3>Student Marks Analyzer</h3>
+    <div class="project-card">
+        <h3>Fitness Tracking System</h3>
         <p>
-            A Python tool that calculates average, grade, and ranking of students from their marks.
+            A Python-based fitness project to track workouts, calories, and progress.
+            (Under active development)
         </p>
-        <p>More samurai projects coming.</p>
     </div>
 </section>
 
-<section>
+<section class="section contact">
     <h2>Contact</h2>
-    <div class="card">
-        <p>GitHub: <a href="https://github.com/naveen-aiml" style="color:#fca5a5;">github.com/naveen-aiml</a></p>
-    </div>
+    <p>
+        GitHub: <a href="https://github.com/naveen-aiml" target="_blank">github.com/naveen-aiml</a>
+    </p>
 </section>
 
-<footer>
-    © 2026 Naveen • AIML Samurai Portfolio
-</footer>
-
-<script>
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-    const trigger = window.innerHeight * 0.8;
-    sections.forEach(sec => {
-        const top = sec.getBoundingClientRect().top;
-        if (top < trigger) {
-            sec.classList.add("show");
-        }
-    });
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
