@@ -1,86 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Naveen | AIML Student</title>
+    <meta charset="UTF-8">
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #0f172a;
+            font-family: 'Segoe UI', sans-serif;
+            background: #0b1120;
             color: #e5e7eb;
+        }
+
+        header {
+            background: #020617;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin: 0;
+            color: #38bdf8;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #cbd5f5;
         }
 
         .container {
             max-width: 900px;
             margin: auto;
-            padding: 40px;
-        }
-
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
+            padding: 40px 20px;
         }
 
         h2 {
             color: #38bdf8;
-            margin-top: 40px;
+            margin-bottom: 15px;
         }
 
         .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 15px;
+            background: #020617;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(56,189,248,0.2);
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         a {
             color: #38bdf8;
             text-decoration: none;
         }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: #64748b;
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Naveen</h1>
-        <p>BTech AIML Student | Python Learner</p>
 
-        <h2>About Me</h2>
-        <div class="card">
-            <p>
-                I am a BTech student in Artificial Intelligence and Machine Learning. 
-                I am learning Python, data structures, and machine learning fundamentals 
-                by building real projects step by step. My goal is to become a strong 
-                engineer, not just someone who uses tools.
-            </p>
-        </div>
+<header>
+    <h1>Naveen</h1>
+    <p>BTech AIML Student | Python Learner</p>
+    <p>Building real projects while learning Machine Learning</p>
+</header>
 
-        <h2>Skills</h2>
-        <div class="card">
-            <ul>
-                <li>Python (Beginner → Intermediate)</li>
-                <li>Problem Solving</li>
-                <li>Statistics & Probability (Learning)</li>
-                <li>Machine Learning Fundamentals (Learning)</li>
-            </ul>
-        </div>
+<div class="container">
 
-        <h2>Projects</h2>
-        <div class="card">
-            <h3>Student Marks Analyzer</h3>
-            <p>
-                A Python program that takes student marks, calculates average, grade, 
-                and class ranking.
-            </p>
-            <p>More projects coming as I learn.</p>
-        </div>
-
-        <h2>Contact</h2>
-        <div class="card">
-            <p>
-                GitHub: <a href="https://github.com/" target="_blank">Your GitHub Profile</a>
-            </p>
-        </div>
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a BTech student in Artificial Intelligence and Machine Learning.
+            I focus on learning Python, data structures, statistics, and machine learning
+            by building projects and improving them step by step.
+        </p>
     </div>
+
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>Python (Beginner → Intermediate)</li>
+            <li>Problem Solving</li>
+            <li>Statistics & Probability</li>
+            <li>Machine Learning Fundamentals</li>
+        </ul>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>Student Marks Analyzer</h3>
+        <p>
+            A Python program that takes student marks, calculates average, grade,
+            and class ranking.
+        </p>
+        <p>More projects coming soon.</p>
+    </div>
+
+    <h2>Contact</h2>
+    <div class="card">
+        <p>
+            GitHub:
+            <a href="https://github.com/naveen-aiml" target="_blank">
+                github.com/naveen-aiml
+            </a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Naveen | AIML Portfolio
+</footer>
+
 </body>
 </html>
