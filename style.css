@@ -14,7 +14,7 @@ body {
 .hero {
   position: relative;
   height: 100vh;
-  background-image: url("./hero.jpg");
+  background-image: url("hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -50,7 +50,7 @@ body {
 }
 
 .block {
-  margin-bottom: 120px;
+  margin-bottom: 100px;
   max-width: 800px;
 }
 
@@ -60,15 +60,14 @@ body {
   margin-bottom: 20px;
 }
 
+.block h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
 .block p {
   font-size: 20px;
   line-height: 1.6;
-}
-
-.card {
-  background: #020617;
-  border-left: 4px solid #f87171;
-  padding: 30px;
 }
 
 a {
