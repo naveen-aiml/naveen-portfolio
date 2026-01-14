@@ -1,16 +1,13 @@
-// Loader
-window.addEventListener("load", () => {
-    document.getElementById("loader").style.display = "none";
-});
+const layers=document.querySelectorAll(".layer");
 
-// Scroll reveal
-const sections = document.querySelectorAll(".section");
+window.addEventListener("scroll",()=>{
+  const s=window.scrollY;
 
-window.addEventListener("scroll", () => {
-    const trigger = window.innerHeight * 0.8;
-    sections.forEach(sec => {
-        if (sec.getBoundingClientRect().top < trigger) {
-            sec.classList.add("show");
-        }
-    });
+  layers[0].style.transform=`translateY(${s*0.15}px)`; // bg
+  layers[1].style.transform=`translateY(${s*0.25}px)`; // glow
+
+  layers[2].style.transform=`translateY(${1000 - s*1}px)`;  // hero
+  layers[3].style.transform=`translateY(${2000 - s*1}px)`;  // about
+  layers[4].style.transform=`translateY(${3000 - s*1}px)`;  // project
+  layers[5].style.transform=`translateY(${4000 - s*1}px)`;  // contact
 });
