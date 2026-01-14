@@ -1,1 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: #050b18;
+    font-family: 'Segoe UI', sans-serif;
+    color: #e5e7eb;
+    overflow-x: hidden;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #020617;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.katana {
+    width: 120px;
+    height: 4px;
+    background: red;
+    animation: slash 1s infinite alternate;
+}
+
+@keyframes slash {
+    from { width: 30px; }
+    to { width: 200px; }
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: radial-gradient(circle at center, #0f172a, #020617);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 72px;
+    color: #b91c1c;
+    letter-spacing: 4px;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #cbd5f5;
+}
+
+/* Sections */
+.section {
+    padding: 120px 15%;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    color: #b91c1c;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Project card */
+.project-card {
+    background: #020617;
+    border-left: 4px solid #b91c1c;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* Links */
+a {
+    color: #fca5a5;
+    text-decoration: none;
+}
