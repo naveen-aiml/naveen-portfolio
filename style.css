@@ -156,3 +156,25 @@ a {
   opacity: 1;
   transform: translateY(0);
 }
+.project-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view-link {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8be9fd;
+  padding: 6px 14px;
+  border: 1px solid #8be9fd;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.view-link:hover {
+  background: #8be9fd;
+  color: black;
+  box-shadow: 0 0 15px #8be9fd;
+}
