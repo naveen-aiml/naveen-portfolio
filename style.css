@@ -16,23 +16,22 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url("hero.jpg");
+    background-image: url("./hero.jpg");
     background-size: cover;
     background-position: center;
-    overflow: hidden;
 }
 
-/* Dark overlay for readability */
+/* Dark overlay */
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(5, 10, 20, 0.6);
+    background: rgba(10, 15, 30, 0.65);
 }
 
-/* Text */
+/* Text container */
 .hero-text {
     position: absolute;
-    left: 10%;
+    left: 8%;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
@@ -40,8 +39,8 @@ body {
 
 .hero-text h1 {
     font-size: 72px;
-    letter-spacing: 4px;
     color: #f87171;
+    letter-spacing: 3px;
 }
 
 .hero-text p {
@@ -50,7 +49,7 @@ body {
     color: #e5e7eb;
 }
 
-/* Subtle floating animation */
+/* Subtle floating */
 .hero-text {
     animation: float 6s ease-in-out infinite;
 }
