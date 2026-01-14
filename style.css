@@ -1,61 +1,28 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.content {
+    background: #020617;
+    padding: 120px 10%;
 }
 
-body {
-    font-family: "Segoe UI", sans-serif;
-    background: #000;
-    color: white;
-    overflow: hidden;
+.block {
+    margin-bottom: 120px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease;
 }
 
-/* HERO SECTION */
-.hero {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("./hero.jpg");
-    background-size: cover;
-    background-position: center;
+.block.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Dark overlay */
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 15, 30, 0.65);
-}
-
-/* Text container */
-.hero-text {
-    position: absolute;
-    left: 8%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 2;
-}
-
-.hero-text h1 {
-    font-size: 72px;
+h2 {
     color: #f87171;
-    letter-spacing: 3px;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.hero-text p {
-    margin-top: 20px;
-    font-size: 22px;
+.block p {
+    font-size: 20px;
     color: #e5e7eb;
-}
-
-/* Subtle floating */
-.hero-text {
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(-50%) translateY(0); }
-    50% { transform: translateY(-50%) translateY(-10px); }
-    100% { transform: translateY(-50%) translateY(0); }
+    max-width: 700px;
 }
